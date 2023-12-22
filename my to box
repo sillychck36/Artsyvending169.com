@@ -1,0 +1,63 @@
+// This is a button that says "Start Game"
+button("Start Game")// When the button is clicked, play a sound
+button("Start Game").click(function() {
+  // Play a "ding ding" sound
+  audio.playSound("ding_ding.mp3")
+})// Ask the user to touch a color
+text.askForColor()
+
+// Wait for the user to touch a color
+waitForUserInput()
+
+// If the user touched red, play a sound and light up a red square
+if (userInput == "red") {
+  audio.playSound("red_light.mp3")
+  redSquare.turnOn()
+}
+
+// If the user touched blue, play a sound and light up a blue square
+else if (userInput == "blue") {
+  audio.playSound("blue_light.mp3")
+  blueSquare.turnOn()
+}
+
+// If the user touched green, play a sound and light up a green square
+else if (userInput == "green") {
+  audio.playSound("green_light.mp3")
+  greenSquare.turnOn()
+}
+
+// If the user didn't touch any color, play a warning sound
+else {
+  audio.playSound("warning.mp3")
+}// Say "Simon Says" before each command
+text.say("Simon Says")
+
+// Ask the user to touch a color
+text.askForColor()
+
+// Wait for the user to touch a color
+waitForUserInput()
+
+// If the user touched red, play a sound and light up a red square
+if (userInput == "red") {
+  audio.playSound("red_light.mp3")
+  redSquare.turnOn()
+}
+
+// If the user touched blue, play a sound and light up a blue square
+else if (userInput == "blue") {
+  audio.playSound("blue_light.mp3")
+  blueSquare.turnOn()
+}
+
+// If the user touched green, play a sound and light up a green square
+else if (userInput == "green") {
+  audio.playSound("green_light.mp3")
+  greenSquare.turnOn()
+}
+
+// If the user didn't touch any color, play a warning sound
+else {
+  audio.playSound("warning.mp3")
+}
